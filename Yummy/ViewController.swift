@@ -13,14 +13,15 @@ import Vision
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var topBarImageView: UIImageView!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    
     
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = false
         
     }
 
@@ -51,9 +52,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //print(results)
             if let firstResult = results.first {
                 if firstResult.identifier.contains("hotdog") {
-                    self.navigationItem.title = "Yummy!"
+                    self.navigationItem.title = "Hotdog!"
+                    self.navigationController?.navigationBar.barTintColor = UIColor.green
+                    self.navigationController?.navigationBar.isTranslucent = false
+                    self.topBarImageView.image = UIImage(named:"hotdog")
                 } else {
-                    self.navigationItem.title = "Not Yummy :("
+                    self.navigationItem.title = "Not Hotdog!"
+                    self.navigationController?.navigationBar.barTintColor = UIColor.red
+                    self.navigationController?.navigationBar.isTranslucent = false
+                    self.topBarImageView.image = UIImage(named:"not-hotdog")
                 }
             }
         }
@@ -67,6 +74,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
+        
+        imagePicker.sourceType = .camera
+        imagePicker.allowsEditing = false
+        
         present(imagePicker, animated: true, completion: nil)
         
     }

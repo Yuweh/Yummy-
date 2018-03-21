@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dlQ-ak-Wr6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bdk-Ot-VxJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -61,7 +61,7 @@
         <!--View Controller-->
         <scene sceneID="C04-fg-vsd">
             <objects>
-                <viewController id="rtH-ge-xy4" customClass="ViewController" customModule="SeeFood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rtH-ge-xy4" customClass="ViewController" customModule="Yummy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tv8-FV-7NP"/>
                         <viewControllerLayoutGuide type="bottom" id="149-q0-m4e"/>
@@ -104,14 +104,14 @@
                     <navigationItem key="navigationItem" id="sxY-b8-aAD">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="qZo-vh-gjV">
                             <connections>
-                                <action selector="cameraTapped:" destination="rtH-ge-xy4" id="bzQ-Cs-WYT"/>
+                                <action selector="cameraTapped:" destination="rtH-ge-xy4" id="lSo-C0-old"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cameraButton" destination="qZo-vh-gjV" id="cn2-N3-bW1"/>
-                        <outlet property="imageView" destination="Z9h-LP-kQU" id="dj1-sm-KnA"/>
-                        <outlet property="topBarImageView" destination="3IJ-FI-Gvi" id="Auc-J3-h5m"/>
+                        <outlet property="cameraButton" destination="qZo-vh-gjV" id="5cU-CD-4di"/>
+                        <outlet property="imageView" destination="Z9h-LP-kQU" id="55L-we-JSe"/>
+                        <outlet property="topBarImageView" destination="3IJ-FI-Gvi" id="uNG-sT-BLx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Q3-my-OaF" sceneMemberID="firstResponder"/>
